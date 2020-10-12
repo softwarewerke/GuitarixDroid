@@ -155,6 +155,18 @@ public class SocketClient {
         params.put(mStrparams);
     }
 
+    public void addIntParam(int i) {
+        params.put(i);
+    }
+
+    public void addDblParam(double d) {
+        try {
+            params.put(d);
+        } catch (Exception ex) {
+            Log.e("GuitarixDroid",ex.getMessage());
+        }
+    }
+
     /**
      * Set JSON Object id
      * @param id Integer identifiying the id
