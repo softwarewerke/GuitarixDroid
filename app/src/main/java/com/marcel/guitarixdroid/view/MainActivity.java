@@ -26,6 +26,7 @@ import android.content.pm.ActivityInfo;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Display;
 import android.view.Menu;
@@ -35,8 +36,10 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.CheckBox;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -61,7 +64,7 @@ import es.dmoral.toasty.Toasty;
  * Main activity class launched on start up.
  */
 public class MainActivity extends AppCompatActivity implements MainActivityView, View.OnClickListener,
-        View.OnLongClickListener {
+        View.OnLongClickListener, SeekBar.OnSeekBarChangeListener {
 
     private TextView bankPresetText;
     private int screenHeight;
@@ -70,6 +73,9 @@ public class MainActivity extends AppCompatActivity implements MainActivityView,
     private Animation animFadein;
     private Menu menu;
     private MaterialDialog connectProgressDialog;
+
+    private CheckBox mute;
+    private SeekBar volume;
 
     /* instanciate presenter  */
     private final Presenter presenter = new GuitarixPresenter(this);
@@ -85,6 +91,12 @@ public class MainActivity extends AppCompatActivity implements MainActivityView,
         context = this;
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        mute = (CheckBox) findViewById(R.id.mute);
+        mute.setOnClickListener(this);
+
+        volume = (SeekBar) findViewById(R.id.volume);
+        volume.setOnSeekBarChangeListener(this);
 
         if (toolbar != null) {
             setSupportActionBar(toolbar);
@@ -304,6 +316,15 @@ public class MainActivity extends AppCompatActivity implements MainActivityView,
      */
     @Override
     public void onClick(View view) {
+        if (view == mute) {
+            CheckBox cb = (CheckBox) view;
+            if (cb.isChecked()) {
+                presenter.unmute();
+            } else {
+                presenter.mute();
+            }
+            return;
+        }
         ImageView image = (ImageView) view;
         image.startAnimation(animFadein);
         presenter.onImageViewClicked(Integer.parseInt(view.getTag().toString()));
@@ -448,4 +469,17 @@ public class MainActivity extends AppCompatActivity implements MainActivityView,
     }
 
 
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+        presenter.setVolume(progress);
+    }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
+
+    }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+    }
 }

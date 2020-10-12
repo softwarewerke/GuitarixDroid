@@ -18,4 +18,7 @@ public interface Presenter {
     void onImageViewClicked(int imageViewPosition);
     void onConnectMenuClicked ();
     void clearAllPreset();
+    boolean mute();
+    boolean unmute();
+    double setVolume(int vol);
 }

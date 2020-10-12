@@ -19,7 +19,6 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_marginTop="?attr/actionBarSize"
     android:layout_height="match_parent"
     android:layout_width="fill_parent"
@@ -35,6 +34,26 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <CheckBox
+            android:id="@+id/mute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <SeekBar
+            android:id="@+id/volume"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            />
+    </LinearLayout>
+    
 <android.widget.GridLayout
     xmlns:grid="http://schemas.android.com/apk/res-auto"
 

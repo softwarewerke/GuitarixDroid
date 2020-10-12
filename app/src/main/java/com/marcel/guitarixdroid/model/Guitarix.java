@@ -179,4 +179,25 @@ public class Guitarix {
         return false;
     }
 
+    public boolean setMute(boolean mute) {
+        final SocketClient mySocket = new SocketClient(address, port);
+        if (mySocket.openSocket()) {
+            mySocket.addParam("engine.mute");
+            mySocket.addIntParam(mute ? 1 : 0);
+            mySocket.setMethod("set");
+            return mySocket.sendJSON();
+        }
+        return false;
+    }
+
+    public double setVolume(double vol) {
+        final SocketClient mySocket = new SocketClient(address, port);
+        if (mySocket.openSocket()) {
+            mySocket.addParam("amp.out_master");
+            mySocket.addDblParam(vol);
+            mySocket.setMethod("set");
+            mySocket.sendJSON();
+        }
+        return vol;
+    }
 }

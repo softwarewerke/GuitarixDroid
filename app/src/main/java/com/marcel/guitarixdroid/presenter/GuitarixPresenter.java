@@ -371,6 +371,50 @@ public class GuitarixPresenter implements Presenter {
 
     }
 
+    public boolean mute() {
+        try {
+            return new AsyncTask<Void, Void, Boolean>() {
+
+                @Override
+                protected Boolean doInBackground(Void... voids) {
+                    return guitarix.setMute(false);
+                }
+            }.execute().get();
+        } catch (Exception ex) {
+
+        }
+        return false;
+    }
+
+    public boolean unmute() {
+        try {
+            return new AsyncTask<Void, Void, Boolean>() {
+
+                @Override
+                protected Boolean doInBackground(Void... voids) {
+                    return guitarix.setMute(true);
+                }
+            }.execute().get();
+        } catch (Exception ex) {
+
+        }
+        return false;
+    }
+
+    public double setVolume(int i) {
+        final Double vol = - ((i / 100.0) * 50.0);
+        try {
+            return new AsyncTask<Void, Void, Double>() {
+
+                @Override
+                protected Double doInBackground(Void... voids) {
+                    return guitarix.setVolume(vol);
+                }
+            }.execute().get();
+        } catch (Exception ex) {
+        }
+        return vol;
+    }
     /**
      * AsyncTask class to retrieve the bank and preset list. If successful the bank and preset list
      * is build. If unsuccessful a connection error dialog is shown.
