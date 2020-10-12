@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GuitarixDroid.iml" filepath="$PROJECT_DIR$/.idea/modules/GuitarixDroid.iml" group="GuitarixDroid" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GuitarixDroid-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GuitarixDroid-app.iml" group="GuitarixDroid/app" />
       <module fileurl="file://$PROJECT_DIR$/GuitarixDroid2.iml" filepath="$PROJECT_DIR$/GuitarixDroid2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
