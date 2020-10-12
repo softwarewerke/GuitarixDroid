@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     android:background="@color/windowBackground" >
 
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             layout="@layout/toolbar"/>
 
-    </android.support.design.widget.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -37,7 +37,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         />
 
-<android.support.v7.widget.GridLayout
+<android.widget.GridLayout
     xmlns:grid="http://schemas.android.com/apk/res-auto"
 
     android:id="@+id/choice_grid"
@@ -47,23 +47,23 @@
     android:layout_marginTop="16dp"
     android:padding="4dp"
 
-    grid:alignmentMode="alignBounds"
-    grid:columnCount="4"
-    grid:rowOrderPreserved="false"
-    grid:useDefaultMargins="true">
+    android:alignmentMode="alignBounds"
+    android:columnCount="4"
+    android:rowOrderPreserved="false"
+    android:useDefaultMargins="true">
 
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:id="@+id/framePreset1"
-        grid:layout_columnWeight="1">
+        android:layout_columnWeight="1">
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:id="@+id/imagePreset1"
         android:tag="0"
-        grid:layout_columnWeight="1"
+        android:layout_columnWeight="1"
         android:src="@drawable/red_guitar_icon"
         android:scaleType="centerInside"
         />
@@ -84,14 +84,14 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:id="@+id/framePreset2"
-        grid:layout_columnWeight="1">
+        android:layout_columnWeight="1">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:id="@+id/imagePreset2"
             android:tag="1"
-            grid:layout_columnWeight="1"
+            android:layout_columnWeight="1"
             android:src="@drawable/red_guitar_icon"
             android:scaleType="centerInside"
             />
@@ -112,14 +112,14 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:id="@+id/framePreset3"
-        grid:layout_columnWeight="1">
+        android:layout_columnWeight="1">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:id="@+id/imagePreset3"
             android:tag="2"
-            grid:layout_columnWeight="1"
+            android:layout_columnWeight="1"
             android:src="@drawable/red_guitar_icon"
             android:scaleType="centerInside"
             />
@@ -140,14 +140,14 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:id="@+id/framePreset4"
-        grid:layout_columnWeight="1">
+        android:layout_columnWeight="1">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:id="@+id/imagePreset4"
             android:tag="3"
-            grid:layout_columnWeight="1"
+            android:layout_columnWeight="1"
             android:src="@drawable/red_guitar_icon"
             android:scaleType="centerInside"
             />
@@ -168,14 +168,14 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:id="@+id/framePreset5"
-        grid:layout_columnWeight="1">
+        android:layout_columnWeight="1">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:id="@+id/imagePreset5"
             android:tag="4"
-            grid:layout_columnWeight="1"
+            android:layout_columnWeight="1"
             android:src="@drawable/red_guitar_icon"
             android:scaleType="centerInside"
             />
@@ -196,14 +196,14 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:id="@+id/framePreset6"
-        grid:layout_columnWeight="1">
+        android:layout_columnWeight="1">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:id="@+id/imagePreset6"
             android:tag="5"
-            grid:layout_columnWeight="1"
+            android:layout_columnWeight="1"
             android:src="@drawable/red_guitar_icon"
             android:scaleType="centerInside"
             />
@@ -224,14 +224,14 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:id="@+id/framePreset7"
-        grid:layout_columnWeight="1">
+        android:layout_columnWeight="1">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:id="@+id/imagePreset7"
             android:tag="6"
-            grid:layout_columnWeight="1"
+            android:layout_columnWeight="1"
             android:src="@drawable/red_guitar_icon"
             android:scaleType="centerInside"
             />
@@ -252,14 +252,14 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:id="@+id/framePreset8"
-        grid:layout_columnWeight="1">
+        android:layout_columnWeight="1">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:id="@+id/imagePreset8"
             android:tag="7"
-            grid:layout_columnWeight="1"
+            android:layout_columnWeight="1"
             android:src="@drawable/red_guitar_icon"
             android:scaleType="centerInside"
             />
@@ -280,14 +280,14 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:id="@+id/framePreset9"
-        grid:layout_columnWeight="1">
+        android:layout_columnWeight="1">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:id="@+id/imagePreset9"
             android:tag="8"
-            grid:layout_columnWeight="1"
+            android:layout_columnWeight="1"
             android:src="@drawable/red_guitar_icon"
             android:scaleType="centerInside"
             />
@@ -308,14 +308,14 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:id="@+id/framePreset10"
-        grid:layout_columnWeight="1">
+        android:layout_columnWeight="1">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:id="@+id/imagePreset10"
             android:tag="9"
-            grid:layout_columnWeight="1"
+            android:layout_columnWeight="1"
             android:src="@drawable/red_guitar_icon"
             android:scaleType="centerInside"
             />
@@ -336,14 +336,14 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:id="@+id/framePreset11"
-        grid:layout_columnWeight="1">
+        android:layout_columnWeight="1">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:id="@+id/imagePreset11"
             android:tag="10"
-            grid:layout_columnWeight="1"
+            android:layout_columnWeight="1"
             android:src="@drawable/red_guitar_icon"
             android:scaleType="centerInside"
             />
@@ -364,14 +364,14 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:id="@+id/framePreset12"
-        grid:layout_columnWeight="1">
+        android:layout_columnWeight="1">
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:id="@+id/imagePreset12"
             android:tag="11"
-            grid:layout_columnWeight="1"
+            android:layout_columnWeight="1"
             android:src="@drawable/red_guitar_icon"
             android:scaleType="centerInside"
             />
@@ -390,8 +390,8 @@
 
 
 
-</android.support.v7.widget.GridLayout>
+</android.widget.GridLayout>
 
 </LinearLayout>
 
-    </android.support.design.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
