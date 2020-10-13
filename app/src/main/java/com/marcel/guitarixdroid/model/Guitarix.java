@@ -222,4 +222,5 @@ public class Guitarix {
         }
         return 0.0;
     }
+
 }
