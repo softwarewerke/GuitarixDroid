@@ -42,6 +42,7 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityView,
     private Menu menu;
     private MaterialDialog connectProgressDialog;
 
-    private CheckBox mute;
+    private ToggleButton mute;
     private SeekBar volume;
 
     /* instanciate presenter  */
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityView,
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
-        mute = (CheckBox) findViewById(R.id.mute);
+        mute = (ToggleButton) findViewById(R.id.mute);
         mute.setOnClickListener(this);
 
         volume = (SeekBar) findViewById(R.id.volume);
@@ -317,13 +318,12 @@ public class MainActivity extends AppCompatActivity implements MainActivityView,
     @Override
     public void onClick(View view) {
         if (view == mute) {
-            CheckBox cb = (CheckBox) view;
+            ToggleButton cb = (ToggleButton) view;
             if (cb.isChecked()) {
                 presenter.unmute();
             } else {
                 presenter.mute();
             }
-            presenter.getVolume();
             return;
         }
         ImageView image = (ImageView) view;

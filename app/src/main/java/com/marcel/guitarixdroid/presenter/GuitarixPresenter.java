@@ -51,7 +51,7 @@ public class GuitarixPresenter implements Presenter {
             "preset5", "preset6", "preset7", "preset8", "preset9", "preset10", "preset11",
             "preset12"};
 
-    // string array variable to store the bank and preset values
+    // string array variable to store the bank and preset check
     private String[][] bankAndPresetValue = new String[MAX_NUMBER_PRESET][2];
 
     // Hash map to store all the banks and presets currently available from guitarix
@@ -112,7 +112,7 @@ public class GuitarixPresenter implements Presenter {
 
 
     /**
-     * Retrieve values to be stored in shared preference
+     * Retrieve check to be stored in shared preference
      *
      * @param imageViewIndex index of the imageview being process
      * @param bankIndex      bank index for banklist array
@@ -402,7 +402,7 @@ public class GuitarixPresenter implements Presenter {
     }
 
     public double setVolume(int i) {
-        final Double vol = ((i / 100.0) * 50.0) - 50;
+        final Double vol = ((i / 100.0) * 50.0) - 50.0;
         try {
             return new AsyncTask<Void, Void, Double>() {
 
