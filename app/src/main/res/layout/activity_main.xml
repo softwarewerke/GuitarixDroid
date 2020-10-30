@@ -18,379 +18,352 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-<LinearLayout
-    android:layout_marginTop="?attr/actionBarSize"
-    android:layout_height="match_parent"
-    android:layout_width="fill_parent"
-    android:background="@drawable/guitar_background"
-    android:orientation="vertical">
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/current_bank_preset_text"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-
-        <ToggleButton
-            android:id="@+id/mute"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_weight="0"
-            android:background="@drawable/check"
-            android:focusable="false"
-            android:focusableInTouchMode="false"
-            android:gravity="center"
-            android:textOff=""
-            android:textOn="" />
-
-        <SeekBar
-            android:id="@+id/volume"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
-    
-<android.widget.GridLayout
-    xmlns:grid="http://schemas.android.com/apk/res-auto"
-
-    android:id="@+id/choice_grid"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
-    android:padding="4dp"
-
-    android:alignmentMode="alignBounds"
-    android:columnCount="3"
-    android:rowOrderPreserved="false"
-    android:useDefaultMargins="true">
-
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:id="@+id/framePreset1"
-        android:layout_columnWeight="1">
-
-    <ImageView
-        android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:id="@+id/imagePreset1"
-        android:tag="0"
-        android:layout_columnWeight="1"
-        android:src="@drawable/red_guitar_icon"
-        android:scaleType="centerInside"
-        />
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@drawable/guitar_background"
+        android:orientation="vertical">
 
         <TextView
+            android:id="@+id/current_bank_preset_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/preset1Text"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/image_textview_margin"
-            />
-    </FrameLayout>
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:id="@+id/framePreset2"
-        android:layout_columnWeight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imagePreset2"
-            android:tag="1"
-            android:layout_columnWeight="1"
-            android:src="@drawable/red_guitar_icon"
-            android:scaleType="centerInside"
-            />
+            <ToggleButton
+                android:id="@+id/mute"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/round_volume_up_white_24dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center"
+                android:scaleType="fitCenter"
+                android:textOff=""
+                android:textOn="" />
 
-        <TextView
+            <SeekBar
+                android:id="@+id/volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <android.widget.GridLayout xmlns:grid="http://schemas.android.com/apk/res-auto"
+
+            android:id="@+id/choice_grid"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/preset2Text"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/image_textview_margin"
-            />
+            android:layout_marginTop="16dp"
+            android:alignmentMode="alignBounds"
 
-    </FrameLayout>
+            android:columnCount="3"
+            android:padding="4dp"
+            android:rowOrderPreserved="false"
+            android:useDefaultMargins="true">
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:id="@+id/framePreset3"
-        android:layout_columnWeight="1">
+            <FrameLayout
+                android:id="@+id/framePreset1"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1">
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imagePreset3"
-            android:tag="2"
-            android:layout_columnWeight="1"
-            android:src="@drawable/red_guitar_icon"
-            android:scaleType="centerInside"
-            />
+                <ImageView
+                    android:id="@+id/imagePreset1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/red_guitar_icon"
+                    android:tag="0" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/preset3Text"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/image_textview_margin"
-            />
+                <TextView
+                    android:id="@+id/preset1Text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image_textview_margin"
+                    android:gravity="center_horizontal" />
+            </FrameLayout>
 
-    </FrameLayout>
+            <FrameLayout
+                android:id="@+id/framePreset2"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1">
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:id="@+id/framePreset4"
-        android:layout_columnWeight="1">
+                <ImageView
+                    android:id="@+id/imagePreset2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/red_guitar_icon"
+                    android:tag="1" />
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imagePreset4"
-            android:tag="3"
-            android:layout_columnWeight="1"
-            android:src="@drawable/red_guitar_icon"
-            android:scaleType="centerInside"
-            />
+                <TextView
+                    android:id="@+id/preset2Text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image_textview_margin"
+                    android:gravity="center_horizontal" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/preset4Text"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/image_textview_margin"
-            />
+            </FrameLayout>
 
-    </FrameLayout>
+            <FrameLayout
+                android:id="@+id/framePreset3"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1">
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:id="@+id/framePreset5"
-        android:layout_columnWeight="1">
+                <ImageView
+                    android:id="@+id/imagePreset3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/red_guitar_icon"
+                    android:tag="2" />
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imagePreset5"
-            android:tag="4"
-            android:layout_columnWeight="1"
-            android:src="@drawable/red_guitar_icon"
-            android:scaleType="centerInside"
-            />
+                <TextView
+                    android:id="@+id/preset3Text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image_textview_margin"
+                    android:gravity="center_horizontal" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/preset5Text"
-            android:maxLines="1"
-            android:maxLength="15"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/image_textview_margin"
-            />
+            </FrameLayout>
 
-    </FrameLayout>
+            <FrameLayout
+                android:id="@+id/framePreset4"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1">
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:id="@+id/framePreset6"
-        android:layout_columnWeight="1">
+                <ImageView
+                    android:id="@+id/imagePreset4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/red_guitar_icon"
+                    android:tag="3" />
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imagePreset6"
-            android:tag="5"
-            android:layout_columnWeight="1"
-            android:src="@drawable/red_guitar_icon"
-            android:scaleType="centerInside"
-            />
+                <TextView
+                    android:id="@+id/preset4Text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image_textview_margin"
+                    android:gravity="center_horizontal" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/preset6Text"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/image_textview_margin"
-            />
+            </FrameLayout>
 
-    </FrameLayout>
+            <FrameLayout
+                android:id="@+id/framePreset5"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1">
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:id="@+id/framePreset7"
-        android:layout_columnWeight="1">
+                <ImageView
+                    android:id="@+id/imagePreset5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/red_guitar_icon"
+                    android:tag="4" />
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imagePreset7"
-            android:tag="6"
-            android:layout_columnWeight="1"
-            android:src="@drawable/red_guitar_icon"
-            android:scaleType="centerInside"
-            />
+                <TextView
+                    android:id="@+id/preset5Text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image_textview_margin"
+                    android:gravity="center_horizontal"
+                    android:maxLength="15"
+                    android:maxLines="1" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/preset7Text"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/image_textview_margin"
-            />
+            </FrameLayout>
 
-    </FrameLayout>
+            <FrameLayout
+                android:id="@+id/framePreset6"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1">
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:id="@+id/framePreset8"
-        android:layout_columnWeight="1">
+                <ImageView
+                    android:id="@+id/imagePreset6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/red_guitar_icon"
+                    android:tag="5" />
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imagePreset8"
-            android:tag="7"
-            android:layout_columnWeight="1"
-            android:src="@drawable/red_guitar_icon"
-            android:scaleType="centerInside"
-            />
+                <TextView
+                    android:id="@+id/preset6Text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image_textview_margin"
+                    android:gravity="center_horizontal" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/preset8Text"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/image_textview_margin"
-            />
+            </FrameLayout>
 
-    </FrameLayout>
+            <FrameLayout
+                android:id="@+id/framePreset7"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1">
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:id="@+id/framePreset9"
-        android:layout_columnWeight="1">
+                <ImageView
+                    android:id="@+id/imagePreset7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/red_guitar_icon"
+                    android:tag="6" />
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imagePreset9"
-            android:tag="8"
-            android:layout_columnWeight="1"
-            android:src="@drawable/red_guitar_icon"
-            android:scaleType="centerInside"
-            />
+                <TextView
+                    android:id="@+id/preset7Text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image_textview_margin"
+                    android:gravity="center_horizontal" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/preset9Text"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/image_textview_margin"
-            />
+            </FrameLayout>
 
-    </FrameLayout>
+            <FrameLayout
+                android:id="@+id/framePreset8"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1">
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:id="@+id/framePreset10"
-        android:layout_columnWeight="1">
+                <ImageView
+                    android:id="@+id/imagePreset8"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/red_guitar_icon"
+                    android:tag="7" />
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imagePreset10"
-            android:tag="9"
-            android:layout_columnWeight="1"
-            android:src="@drawable/red_guitar_icon"
-            android:scaleType="centerInside"
-            />
+                <TextView
+                    android:id="@+id/preset8Text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image_textview_margin"
+                    android:gravity="center_horizontal" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/preset10Text"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/image_textview_margin"
-            />
+            </FrameLayout>
 
-    </FrameLayout>
+            <FrameLayout
+                android:id="@+id/framePreset9"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1">
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:id="@+id/framePreset11"
-        android:layout_columnWeight="1">
+                <ImageView
+                    android:id="@+id/imagePreset9"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/red_guitar_icon"
+                    android:tag="8" />
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imagePreset11"
-            android:tag="10"
-            android:layout_columnWeight="1"
-            android:src="@drawable/red_guitar_icon"
-            android:scaleType="centerInside"
-            />
+                <TextView
+                    android:id="@+id/preset9Text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image_textview_margin"
+                    android:gravity="center_horizontal" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/preset11Text"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/image_textview_margin"
-            />
+            </FrameLayout>
 
-    </FrameLayout>
+            <FrameLayout
+                android:id="@+id/framePreset10"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1">
 
-    <FrameLayout
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:id="@+id/framePreset12"
-        android:layout_columnWeight="1">
+                <ImageView
+                    android:id="@+id/imagePreset10"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/red_guitar_icon"
+                    android:tag="9" />
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imagePreset12"
-            android:tag="11"
-            android:layout_columnWeight="1"
-            android:src="@drawable/red_guitar_icon"
-            android:scaleType="centerInside"
-            />
+                <TextView
+                    android:id="@+id/preset10Text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image_textview_margin"
+                    android:gravity="center_horizontal" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/preset12Text"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/image_textview_margin"
-            />
+            </FrameLayout>
 
-    </FrameLayout>
+            <FrameLayout
+                android:id="@+id/framePreset11"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1">
+
+                <ImageView
+                    android:id="@+id/imagePreset11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/red_guitar_icon"
+                    android:tag="10" />
+
+                <TextView
+                    android:id="@+id/preset11Text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image_textview_margin"
+                    android:gravity="center_horizontal" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/framePreset12"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1">
+
+                <ImageView
+                    android:id="@+id/imagePreset12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/red_guitar_icon"
+                    android:tag="11" />
+
+                <TextView
+                    android:id="@+id/preset12Text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/image_textview_margin"
+                    android:gravity="center_horizontal" />
+
+            </FrameLayout>
 
 
+        </android.widget.GridLayout>
 
-</android.widget.GridLayout>
-
-</LinearLayout>
+    </LinearLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
